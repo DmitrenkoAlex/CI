@@ -1,43 +1,36 @@
-HELP.md
-.gradle
-build/
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-out/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
-.vscode/
-
-### Package Files ###
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-### Exclusions ###
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**
-!**/src/test/**
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "array",
+  "default": [],
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "name",
+      "number",
+      "balance",
+      "currency"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "number": {
+        "type": "string",
+        "pattern": "^•• \\d{4}$"
+      },
+      "balance": {
+        "type": "integer",
+        "default": 0
+      },
+      "currency": {
+        "type": "string"
+      }
+    }
+  }
+}
